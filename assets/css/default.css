@@ -1,0 +1,67 @@
+#jfooter-container{width:100%; background: url("../images/footer.jpg"); border-radius: 10px; overflow:auto; 
+    padding-bottom:5px; -moz-border-radius: 10px; -webkit-border-radius:10px; }
+#jfooter-container a{ color:rgba(255,255,255,0.75); text-emphasis: none;}
+#jfooter-container a:hover{ color:rgba(255,255,255, 1); text-decoration: none; }
+#jfooterAboutUsDesc{font-size:1.1em; color:#fff;}
+
+.jfooter-theme-box-container{ float:left; margin: 0 .5%; font-size:1.1em;  }
+.jfooter-theme-box-container h4{padding-left: 5px; font-size: 1.3em; color:white; text-shadow:1px 1px 0 black;}
+.contact-jfooter{font-size:1.1em; margin-bottom:10px; }
+
+
+#abilities{ width:18%;  }
+#about_us{ width:43%; }
+#contact{ width:23%;  }
+#social{ width:12%;  }
+
+/** social network style **/
+.social-link{font-size: 16px; margin-bottom:6px; margin-left:10px; }
+.social-link-label{padding-bottom: 3px;}
+
+#footer-abilities{width:96%; margin:0 auto;}
+.abilities-list{ padding: 0; }
+.abilities-list li{list-style:none; background: url("../images/power.png") no-repeat left center; padding-left: 20px; font-size:1.1em; }
+.abilities-list li:hover{list-style:none; background: url("../images/power_on.png") no-repeat left center; padding-left: 20px; }
+.abilities-list hr{width:50%; margin: 5px 20px; opacity: 0.3;
+    height: 1px; background-image: -webkit-linear-gradient(left, rgba(255, 255,255,0), rgba(255,255,255,0.75), rgba(255,255,255,0));
+    background-image: -moz-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,0.75), rgba(255,255,255,0)); 
+    background-image: -ms-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,0.75), rgba(255,255,255,0)); 
+    background-image: -o-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,0.75), rgba(255,255,255,0));
+}
+#jfooter_bottom_wrapper{ margin-top: 15px; width:100%;}
+#jfooter_bottom_wrapper ul{ list-style: none; width:100%; display:inline; }
+#jfooter_bottom_wrapper ul li#first-item{ float:left;  }
+#jfooter_bottom_wrapper ul li#last-item{ float:right;  }
+
+#jfooter-contact-form-wrapper .horizontal-form .control-group{  }
+#jfooter-contact-form-wrapper .horizontal-form .controls{ width: 100%; float: left; margin-bottom: 5px;  }
+#jfooter-contact-form-wrapper .horizontal-form .controls input[type="text"]{ width: 95%; height: 22px; background-color: rgba(29, 29, 20, 0.5); color:white; border: 0; border-radius: 4px;}
+#jfooter-contact-form-wrapper .horizontal-form .controls textarea{ width: 95%; background-color: rgba(29, 29, 20, 0.5); color: white; border: 0; border-radius: 4px;}
+#jfooter-contact-form-wrapper .horizontal-form .message{ height: auto; margin-bottom: 10px;}
+
+@media screen and  (max-width: 480px) {
+    #jfooter-container{  }
+    #abilities{ width:49%;  }
+    #about_us{ width:0; display: none; }
+    #contact{ width:49%;  }
+    #social{ width:99%; clear: both; margin:0 auto; text-align: center; padding-top: 5px; }
+    #social h4{ display: none; }
+    #social .social-link-label{ display: none; }
+    #social .social-link{ display: inline; }
+}
+
+@media screen  and (min-width: 481px) and (max-width: 767px){
+    #jfooter-container{ }
+    #abilities{ width:32%;  }
+    #about_us{ width:0; display: none; }
+    #contact{ width:32%;  }
+    #social{ width:33%;  }
+}
+
+@media screen  and (min-width: 768px) and (max-width: 992px){
+    #jfooter-container{  }
+    #abilities{ width:18%;  }
+    #about_us{ width:40%; }
+    #contact{ width:23%;  }
+    #social{ width:14%;  }
+}
