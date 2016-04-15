@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<extension version="3.0" type="module" client="site" method="upgrade" >
+	<name>jfooter</name>
+	<creationDate>12/10/2011</creationDate>
+	<author>jeprodev</author>
+	<authorEmail>jeprodev@gmail.com</authorEmail>
+	<authorUrl>jeprodev.net</authorUrl>
+	<version>1.0.7</version>
+	<description>MOD_JFOOTER_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_jfooter">mod_jfooter.xml</filename>
+		<filename module="mod_jfooter">mod_jfooter.php</filename>
+		<filename module="mod_jfooter">helper.php</filename>
+		<filename module="mod_jfooter">index.html</filename>
+		<folder module="mod_jfooter">assets</folder>
+		<folder module="mod_jfooter">tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">languages/en-GB.mod_jfooter.ini</language>
+		<language tag="en-GB">languages/en-GB.mod_jfooter.sys.ini</language>
+		<language tag="fr-FR">languages/fr-FR.mod_jfooter.ini</language>
+		<language tag="fr-FR">languages/fr-FR.mod_jfooter.sys.ini</language>
+	</languages>
+    <config>
+	<fields name="params">
+        <fieldset name="BASIC">
+            <field name="jfooter_web_designer_name" type="text" default="Jeprodev" label="MOD_JFOOTER_WEB_DESIGNER_NAME_LABEL" description="MOD_JFOOTER_WEB_DESIGNER_NAME_DESC" />
+            <field name="jfooter_web_designer_url" type="text" default="http://jeprodev.net" label="MOD_JFOOTER_WEB_DESIGNER_URL_LABEL" description="MOD_JFOOTER_WEB_DESIGNER_URL_DESC" />
+            <field name="jfooter_show_first_box" class="btn-group" type="radio" default="1" label="MOD_JFOOTER_SHOW_FIRST_AREA_LABEL" description="MOD_JFOOTER_SHOW_FIRST_AREA_DESC">
+                <option value="1">MOD_JFOOTER_YES</option>
+                <option value="0">MOD_JFOOTER_NO</option>
+            </field>
+            <field name="jfooter_first_box_theme" type="filelist" default="" directory="modules/mod_jfooter/tmpl/themes" label="MOD_JFOOTER_FIRST_THEME_LABEL" description="MOD_JFOOTER_FIRST_THEME_DESC" filter="\.php" />
+                <field name="jfooter_show_second_box" class="btn-group" type="radio" default="1" label="MOD_JFOOTER_SHOW_SECOND_AREA_LABEL" description="MOD_JFOOTER_SHOW_SECOND_AREA_DESC">
+                    <option value="1">MOD_JFOOTER_YES</option>
+                    <option value="0">MOD_JFOOTER_NO</option>
+                </field>
+                <field name="jfooter_second_box_theme" type="filelist" default="" directory="modules/mod_jfooter/tmpl/themes" label="MOD_JFOOTER_SECOND_THEME_LABEL" description="MOD_JFOOTER_SECOND_THEME_DESC" filter="\.php" />
+                <field name="jfooter_show_third_box" class="btn-group" type="radio" default="1" label="MOD_JFOOTER_SHOW_THIRD_AREA_LABEL" description="MOD_JFOOTER_SHOW_THIRD_AREA_DESC">
+                    <option value="1">MOD_JFOOTER_YES</option>
+                    <option value="0">MOD_JFOOTER_NO</option>
+                </field>
+                <field name="jfooter_third_box_theme" type="filelist" default="" directory="modules/mod_jfooter/tmpl/themes" label="MOD_JFOOTER_THIRD_THEME_LABEL" description="MOD_JFOOTER_THIRD_THEME_DESC" filter="\.php" />
+                <field name="jfooter_show_fourth_box" class="btn-group" type="radio" default="1" label="MOD_JFOOTER_SHOW_FOURTH_AREA_LABEL" description="MOD_JFOOTER_SHOW_FOURTH_DESC">
+                    <option value="1">MOD_JFOOTER_YES</option>
+                    <option value="0">MOD_JFOOTER_NO</option>
+                </field>
+                <field name="jfooter_fourth_box_theme" type="filelist" default="" directory="modules/mod_jfooter/tmpl/themes" label="MOD_JFOOTER_FOURTH_THEME_LABEL" description="MOD_JFOOTER_FOURTH_THEME_DESC" filter="\.php" />
+            </fieldset>
+            <fieldset name="SOCIAL_NETWORK">
+                <field name="show_jfooter_facebook_link" class="btn-group" type="radio" default="1" label="MOD_JFOOTER_SHOW_FACEBOOK_LINK_LABEL" description="MOD_JFOOTER_SHOW_FACEBOOK_LINK_DESC" >
+                    <option value="1">MOD_JFOOTER_YES</option>
+                    <option value="0">MOD_JFOOTER_NO</option>
+		</field>
+                <field name="jfooter_facebook_link" type="text"   size="35" default="" label="MOD_JFOOTER_SET_FACEBOOK_LINK_LABEL" description="MOD_JFOOTER_SET_FACEBOOK_LINK_DESC" ></field>
+		<field name="jfooter_facebook_icon_path" type="text" size="35" default="modules/mod_jfooter/assets/images/thumbs/facebook.png" label="MOD_JFOOTER_FACEBOOK_ICON_PATH_LABEL" description="MOD_JFOOTER_FACEBOOK_ICON_PATH_DESC" />
+                <field name="show_jfooter_twitter_link" class="btn-group" type="radio" default="1" label="MOD_JFOOTER_SHOW_TWITTER_LINK_LABEL" description="MOD_JFOOTER_SHOW_TWITTER_LINK_DESC" >
+                    <option value="1">MOD_JFOOTER_YES</option>
+                    <option value="0">MOD_JFOOTER_NO</option>
+		</field>
+                <field name="jfooter_twitter_link" type="text"   size="35" default="" label="MOD_JFOOTER_SET_TWITTER_LINK_LABEL" description="MOD_JFOOTER_SET_FACEBOOK_LINK_DESC" ></field>
+                <field name="jfooter_twitter_icon_path" type="text" size="35" default="modules/mod_jfooter/assets/images/thumbs/twitter.png" label="MOD_JFOOTER_TWITTER_ICON_PATH_LABEL" description="MOD_JFOOTER_TWITTER_ICON_PATH_DESC" />
+                <field name="show_jfooter_google_plus_link" class="btn-group" type="radio" default="1" label="MOD_JFOOTER_SHOW_GOOGLE_PLUS_LINK_LABEL" description="MOD_JFOOTER_SHOW_FACEBOOK_LINK_DESC" >
+                    <option value="1">MOD_JFOOTER_YES</option>
+                    <option value="0">MOD_JFOOTER_NO</option>
+		</field>
+                <field name="jfooter_google_plus_link" type="text" size="35" default="" label="MOD_JFOOTER_SET_GOOGLE_PLUS_LINK_LABEL" description="MOD_JFOOTER_SET_GOOGLE_PLUS_LINK_DESC" ></field>
+				<field name="jfooter_google_plus_icon" type="text" size="35" default="modules/mod_jfooter/assets/images/thumbs/google-plus.png" label="MOD_JFOOTER_GOOGLE_PLUS_ICON_PATH_LABEL" description="MOD_JFOOTER_GOOGLE_PLUS_ICON_PATH_DESC" />
+                <field name="jfooter_first_item" class="btn-group" type="radio" default="1"  label="MOD_JFOOTER_SHOW_FIRST_ITEM_LINK_LABEL" description="MOD_JFOOTER_SHOW_FIRST_ITEM_LINK_DESC" >
+                    <option value="1">MOD_JFOOTER_YES</option>
+                    <option value="0">MOD_JFOOTER_NO</option>
+                </field>
+                <field name="jfooter_first_item_label" type="text" default="" size="35" label="MOD_JFOOTER_FIRST_ITEM_LABEL" description="MOD_JFOOTER_FIRST_ITEM_DESC" />
+                <field name="jfooter_first_item_link" type="text" default=""  label="MOD_JFOOTER_FIRST_ITEM_LINK_LABEL" description="MOD_JFOOTER_FIRST_ITEM_LINK_DESC" ></field>
+                <field name="jfooter_first_item_icon_path" type="text" default=""  label="MOD_JFOOTER_FIRST_ITEM_ICON_PATH_LABEL" description="MOD_JFOOTER_FIRST_ITEM_ICON_PATH_DESC" ></field>
+                <field name="jfooter_show_second_item" class="btn-group" type="radio" default="1"  label="MOD_JFOOTER_SHOW_SECOND_ITEM_LINK_LABEL" description="MOD_JFOOTER_SHOW_SECOND_ITEM_LINK_DESC" >
+                    <option value="1">MOD_JFOOTER_YES</option>
+                    <option value="0">MOD_JFOOTER_NO</option>
+                </field>
+                <field name="jfooter_second_item_label" type="text" default="" size="35" label="MOD_JFOOTER_SECOND_ITEM_LABEL" description="MOD_JFOOTER_SECOND_ITEM_DESC" />
+                <field name="jfooter_second_item_link" type="text" default=""  label="MOD_JFOOTER_SECOND_ITEM_LINK_LABEL" description="MOD_JFOOTER_SECOND_ITEM_LINK_DESC" ></field>
+                <field name="jfooter_second_item_icon_path" type="text" default=""  label="MOD_JFOOTER_SECOND_ITEM_ICON_PATH_LABEL" description="MOD_JFOOTER_SECOND_ITEM_ICON_PATH_DESC" ></field>
+                <field name="show_jfooter_rss_link" class="btn-group" type="radio" default="1" label="MOD_JFOOTER_SHOW_RSS_LINK_LABEL" description="MOD_JFOOTER_SHOW_RSS_LINK_DESC" >
+                    <option value="1">MOD_JFOOTER_YES</option>
+                    <option value="0">MOD_JFOOTER_NO</option>
+                </field>
+                <field name="jfooter_rss_link" type="text" size="35" default="" label="MOD_JFOOTER_SET_RSS_LINK_LABEL" description="MOD_JFOOTER_SET_RSS_LINK_DESC" ></field>
+                <field name="jfooter_rss_icon" type="text" size="35" default="modules/mod_jfooter/assets/images/thumbs/rss.png" label="MOD_JFOOTER_RSS_ICON_PATH_LABEL" description="MOD_JFOOTER_RSS_DESC"/>
+            </fieldset>
+            <fieldset name="ABILITIES">
+                <field name="jfooter_first_ability" type="text" size="35" default="" label="MOD_JFOOTER_FIRST_ABILITY_LABEL" description="MOD_JFOOTER_FIRST_ABILITY_DESC" />
+                <field name="jfooter_first_ability_link" type="text" size="35" default="#" label="MOD_JFOOTER_FIRST_ABILITY_LINK_LABEL" description="MOD_JFOOTER_FIRST_ABILITY_LINK_DESC" />
+                <field name="jfooter_second_ability" type="text" size="35" default="" label="MOD_JFOOTER_SECOND_ABILITY_LABEL" description="MOD_JFOOTER_SECOND_ABILITY_DESC" />
+                <field name="jfooter_second_ability_link" type="text" size="35" default="#" label="MOD_JFOOTER_SECOND_ABILITY_LINK_LABEL" description="MOD_JFOOTER_SECOND_ABILITY_LINK_DESC" />
+                <field name="jfooter_third_ability" type="text" size="35" default="" label="MOD_JFOOTER_THIRD_ABILITY_LABEL" description="MOD_JFOOTER_THIRD_ABILITY_DESC" />
+                <field name="jfooter_third_ability_link" type="text" size="35" default="#" label="MOD_JFOOTER_THIRD_ABILITY_LINK_LABEL" description="MOD_JFOOTER_THIRD_ABILITY_LINK_DESC" />
+                <field name="jfooter_fourth_ability" type="text" size="35" default="" label="MOD_JFOOTER_FOURTH_ABILITY_LABEL" description="MOD_JFOOTER_FOURTH_ABILITY_DESC" />
+                <field name="jfooter_fourth_ability_link" type="text" size="35" default="#" label="MOD_JFOOTER_FOURTH_ABILITY_LINK_LABEL" description="MOD_JFOOTER_FOURTH_ABILITY_LINK_DESC" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
